@@ -1,0 +1,4 @@
+/*
+*	uCarousel
+*	Author: Ratheesh Naithalath
+*/
