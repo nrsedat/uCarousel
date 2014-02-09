@@ -51,15 +51,52 @@
 			drag : true,
 			slideDuration : 500
 			}, id = 0,
-			carousel,
+			Carousel,
 			createId;
-		carousel = function(element){
 
+		// Constructor
+		Carousel = function(element,options){
+			this.setOptions(options);
+			this.initElements(element);
+			if(!this.$items.length){return;}
+			this.setId();
+			this.$element.trigger('slideChange.ucarousel',[1]);
 		};
-		carousel.prototype.initElements = function(element){
-			this._element = $(element);
+
+		Carousel.prototype.setOptions = function (opts) {
+                var options = this.options || $.extend({}, defaults, opts);
+                this.options = options;
+            };
+
+		/*
+             *   $(element).uCarousel(initElements)
+             *   @Description:- Initializes the carousel elements.
+             *   @ param     :- The carousel container element
+             */
+		Carousel.prototype.initElements = function(element){
+			this.$element = $(element);
+			this.$items = this.$element.children().children(); 
 		};
-		return carousel;
+
+            /*
+             *   $(element).uCarousel(id)
+             *   @Description:- Sets unique id for the carousel.
+             *   @ param     :- None
+             */
+            Carousel.prototype.setId = function () {
+                var newId = createId();
+                this.id = function () {
+                    return newId;
+                };
+                return newId;
+            };
+
+            createId = function () {
+                return id++;
+            };
+
+
+		return Carousel;
 	})(jQuery,window.uUtils);
 
 	//Add Carousel to the jQuery.fn object
