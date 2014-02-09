@@ -180,6 +180,7 @@ header h1 {
   font-weight: 800;
   font-style: normal;
   color: #ece4d8;
+  text-transform: none;
   text-align: center;
   line-height:1;
   padding: 14px 20px 0;
