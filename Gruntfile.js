@@ -36,7 +36,14 @@ module.exports = function(grunt) {
       files: ['js/ucarousel.js','js/tests.js'],
       // configure JSHint (documented at http://www.jshint.com/docs/)
       options: {
-          // more options here if you want to override JSHint defaults
+        "curly": true,
+        "eqnull": true,
+        "eqeqeq": true,
+        "es3": true,
+        //"indent": 4,
+        //"undef": true,
+        //"unused": true,
+        "camelcase": true,
         globals: {
           jQuery: true,
           console: true,
