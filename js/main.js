@@ -1,0 +1,3 @@
+(function  ($) {
+	$('.ucarousel').uCarousel();
+})(jQuery);
