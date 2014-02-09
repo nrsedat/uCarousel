@@ -1,3 +1,23 @@
+//Essential
+.ucarousel-inner {
+	white-space: nowrap;
+	position: relative;
+	padding: 0;
+	* {
+		display: inline-block;
+		white-space: normal;
+		vertical-align: middle;
+		width: 100%;
+	}
+}
+
+
+#content {
+	width: 600px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+}
 .headline {
 	text-align: center;
 }

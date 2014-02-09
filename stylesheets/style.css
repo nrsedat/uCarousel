@@ -1,4 +1,26 @@
-/* line 1, ../sass/style.scss */
+/* line 2, ../sass/style.scss */
+.ucarousel-inner {
+  white-space: nowrap;
+  position: relative;
+  padding: 0;
+}
+/* line 6, ../sass/style.scss */
+.ucarousel-inner * {
+  display: inline-block;
+  white-space: normal;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* line 15, ../sass/style.scss */
+#content {
+  width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* line 21, ../sass/style.scss */
 .headline {
   text-align: center;
 }

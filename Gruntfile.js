@@ -62,8 +62,15 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      files: ['<%= jshint.files %>'],
-      tasks: ['jshint', 'qunit']
+      scripts :{
+        files: ['<%= jshint.files %>'],
+        tasks: ['jshint', 'qunit']
+      },
+      stylesheets : {
+        files: ['<%= compass.dist.options.sassDir%>/*.scss'],
+        tasks: ['compass']
+      }
+
     }
 
   });
