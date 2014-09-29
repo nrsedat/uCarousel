@@ -7,7 +7,7 @@
 (function($){
     "use strict";
 	var Utils = (function(){
-		var hasTouch = Object.prototype.hasOwnProperty.call(document,'ontouchend'),
+		var hasTouch = document.hasOwnProperty('ontouchend') || typeof document.ontouchstart !== 'undefined',
 		getProperty = function(name){
 			var prefixes = ['Webkit', 'Moz', 'O', 'ms', ''],
 				testStyle = document.createElement('div').style;
@@ -270,7 +270,7 @@
                 }
 
                 //bind swipe events
-                this.$sliderList.on(Utils.events.down + '.ucarousel', start)
+                this.$elmnts.on(Utils.events.down + '.ucarousel', start)
                     .on(Utils.events.move + '.ucarousel', drag)
                     .on(Utils.events.up + '.ucarousel', end)
                     .on('click.carousel', click)
