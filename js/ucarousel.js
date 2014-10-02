@@ -270,7 +270,7 @@
                 }
 
                 //bind swipe events
-                this.$elmnts.on(Utils.events.down + '.ucarousel', start)
+                this.$sliderList.children().on(Utils.events.down + '.ucarousel', start)
                     .on(Utils.events.move + '.ucarousel', drag)
                     .on(Utils.events.up + '.ucarousel', end)
                     .on('click.carousel', click)
